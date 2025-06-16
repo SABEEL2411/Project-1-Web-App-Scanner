@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Web Vuln Scanner</title>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: auto; }
+    code { background: #f1f1f1; padding: 2px 4px; }
+    .hit { margin: .5em 0; padding: .5em; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+  <h2>Web Application Vulnerability Scanner</h2>
+  <form method="post">
+    <input name="url" placeholder="https://target.com" style="width:70%" required>
+    <button type="submit">Scan</button>
+  </form>
+
+  {% if results %}
+    <h3>Results ({{ results|length }})</h3>
+    {% for r in results %}
+      <div class="hit">
+        <strong>{{ r.type }}</strong> at <code>{{ r.url }}</code><br>
+        Payload: <code>{{ r.payload }}</code>
+      </div>
+    {% endfor %}
+    {% if report %}
+      <p>📄 Report saved to <code>{{ report }}</code></p>
+    {% endif %}
+  {% endif %}
+</body>
+</html>
+
