@@ -6,8 +6,8 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 
 
 from flask import Flask, render_template, request
-from Scanner.scanner import scan_xss
-from Scanner.reporter import save_report
+from scanner.scanner import scan_xss
+from scanner.reporter import save_report
 
 app = Flask(__name__)
 
