@@ -25,18 +25,31 @@ Build a Python-based scanner with a Flask UI to detect common web application vu
 ## 🗂️ Project Structure
 
 Web-Vuln-Scanner/
+
 ├── app/
+
 │ ├── app.py # Flask web interface
+
 │ └── templates/
+
 │ └── index.html # UI form
+
 ├── scanner/
+
 │ ├── init.py
+
 │ ├── scanner.py # XSS scanning logic
+
 │ ├── crawler.py # Extract links/forms
+
 │ ├── payloads.py # XSS/SQLi payloads
+
 │ └── reporter.py # Save and show reports
+
 ├── reports/
+
 │ └── report_<timestamp>.json
+
 └── README.md
 
 
